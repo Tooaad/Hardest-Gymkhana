@@ -91,13 +91,13 @@ void take_speed(t_race *race, t_node *speed, char *sp, int *shortest, int i)
 		if (speed->c == 'H')
 		{
 			speed->left = (t_node *) malloc((race->nobs) * sizeof(t_node));
-			speed->right = (t_node *) malloc((race->nobs) * sizeof(t_node));
 			speed->left->c = 'F';
 			sp[i] = 'F';
 			take_speed(race, speed->left, sp, shortest, i + 1);
 			free(speed->left);
 			if (i == race->nobs - 1)
 				return ;
+			speed->right = (t_node *) malloc((race->nobs) * sizeof(t_node));
 			speed->right->c = 'H';
 			sp[i] = 'H';
 			take_speed(race, speed->right, sp, shortest, i + 1);
@@ -138,7 +138,6 @@ void start_race(t_race *race)
 	int		*shortest;
 
 	shortest = shortest_path(race);
-
 	race->speeds = (char *) malloc((race->nobs) * sizeof(char));
 	sp = (char *) malloc((race->nobs) * sizeof(char));
 	for (int i = 0; i < race->nobs; i++)	// Init to null
@@ -411,18 +410,12 @@ void set_up(t_race *race, char *line, int fd)
 	}
 }
 
-void cleaks()
-{
-	system("leaks program.run");
-}
-
 int main()
 {
 	t_race	race;
 	char	*line;
 	int		fd;
 
-	atexit(cleaks);
 	race.trails = NULL;	
 	fd = 0;
 	while (get_next_line(fd, &line))

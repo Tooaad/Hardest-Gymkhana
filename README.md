@@ -6,4 +6,5 @@ gcc ./build/main.c.o -o build/program.run
 
 How to run:
 
+cd build
 ./program.run < FILE_NAME
