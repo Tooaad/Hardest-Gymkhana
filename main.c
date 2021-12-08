@@ -95,7 +95,7 @@ void take_speed(t_race *race, t_node *speed, char *sp, int *shortest, int i)
 			sp[i] = 'F';
 			take_speed(race, speed->left, sp, shortest, i + 1);
 			free(speed->left);
-			if (i == race->nobs - 1)
+			if (i == race->nobs - 1 || (sp[0] == 'H' && sp[1] == 'H'))
 				return ;
 			speed->right = (t_node *) malloc((race->nobs) * sizeof(t_node));
 			speed->right->c = 'H';
