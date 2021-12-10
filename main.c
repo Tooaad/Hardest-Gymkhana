@@ -79,12 +79,14 @@ void take_speed(t_race *race, t_node *speed, char *sp, int *shortest, int i)
 		speed->right = (t_node *) malloc((race->nobs) * sizeof(t_node));
 		speed->left->c = 'F';
 		speed->right->c = 'H';
-		sp[i] = 'F';
-		take_speed(race, speed->left, sp, shortest, i + 1);
-		free(speed->left);
+		sp[i++] = 'F';
 		sp[i] = 'H';
 		take_speed(race, speed->right, sp, shortest, i + 1);
 		free(speed->right);
+		sp[i++] = 'H';
+		sp[i] = 'F';
+		take_speed(race, speed->left, sp, shortest, i + 1);
+		free(speed->left);
 	}
 	if (i < race->nobs)
 	{
@@ -95,7 +97,7 @@ void take_speed(t_race *race, t_node *speed, char *sp, int *shortest, int i)
 			sp[i] = 'F';
 			take_speed(race, speed->left, sp, shortest, i + 1);
 			free(speed->left);
-			if (i == race->nobs - 1 || (sp[0] == 'H' && sp[1] == 'H'))
+			if (i == race->nobs - 1 || (sp[i-2] == 'H' && sp[i-1] == 'H'))
 				return ;
 			speed->right = (t_node *) malloc((race->nobs) * sizeof(t_node));
 			speed->right->c = 'H';
@@ -111,7 +113,7 @@ void take_speed(t_race *race, t_node *speed, char *sp, int *shortest, int i)
 			take_speed(race, speed->right, sp, shortest, i + 1);
 			free(speed->right);
 		}
-	}
+	}	
 	if ((calc_stamina(shortest, sp, race->nobs)) < race->total)
 	{
 		race->total = calc_stamina(shortest, sp, race->nobs);
