@@ -30,11 +30,9 @@ Contestans can go upstairs and downstairs to any floor they want. Contestans hav
 ## Approach
 As we were asked to solve this with a Dynamic Programming solution I decided to split the problem in two parts, find the shortest path and get the optimal speed. Although the optimal approach would be using a memoizing algorithm. I used a recursive tree to find the best optimal speed for the formula we had to discover.
 
+## Solution
+![](https://i.imgur.com/KYMEo37.gif)
+
 ## Usage
 `$ make && ./program.run < input.txt`
-
-## Solution
-![](https://i.gyazo.com/711d300cc893fbc031a76d33995ab1bf.png)
-
-![](https://i.imgur.com/KYMEo37.gif)
 
