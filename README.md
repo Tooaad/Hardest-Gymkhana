@@ -20,7 +20,7 @@ Contestans can go upstairs and downstairs to any floor they want. Contestans hav
 109 48 93 105 81 74
 100 55 90 92 65 68
 
-// Other competition
+// Another competition
 // Number of floors - Obstacles
 1 55
 // Obstacles
