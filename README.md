@@ -6,7 +6,7 @@ Dynamic Programming exercise where we needed to find the best solution given a f
 The production team of a TV show have launched a gymkhana competition in which the contestants have to overcome crazy obstacles in order to win one million dollars. 
 The rules of the show establish that contestants have to run through a building that have  several floors. In each level there is a sequence of obstacles. All levels have the same number of obstacles. Levels are connected by stairs at the end of each obstacle. 
 
-![](https://gyazo.com/95adfd69a7a0e4863be76e09b2a5a15f)
+![](https://i.gyazo.com/95adfd69a7a0e4863be76e09b2a5a15f.png)
 
 Contestans can go upstairs and downstairs to any floor they want. Contestans have 2 states, they can make the obstacles at max speed, or half speed, if they decide to do it this way, the time it will take will be twice as long. Contestants does not have the ability to make two consecutive obstacles at max speed.
 
@@ -34,7 +34,7 @@ As we were asked to solve this with a Dynamic Programming solution I decided to 
 `$ make && ./program.run < input.txt`
 
 ## Solution
-![](https://gyazo.com/711d300cc893fbc031a76d33995ab1bf)
+![](https://i.gyazo.com/711d300cc893fbc031a76d33995ab1bf.png)
 
 ![](https://i.imgur.com/KYMEo37.gif)
 
