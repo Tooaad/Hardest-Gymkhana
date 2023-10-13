@@ -1,6 +1,6 @@
 # 🏃Hardest Gymkhana
 
-**Dynamic Programming exercise** where we needed to find the best solution given a formula to find the minimum path.
+**Dynamic Programming exercise** where I needed to find the best solution given a formula to find the minimum path.
 
 ## Subject
 The production team of a TV show have launched a gymkhana competition in which the contestants have to overcome crazy obstacles in order to win one million dollars. 
@@ -28,7 +28,7 @@ Contestans can go upstairs and downstairs to any floor they want. Contestans hav
 ```
 
 ## Approach
-As we were asked to solve this with a Dynamic Programming solution I decided to split the problem in two parts, find the shortest path and get the optimal speed. Although the **optimal approach would be a memoizing algorithm**. **I used a recursive tree** to find the best optimal speed for the formula we had to discover.
+As I were asked to solve this with a Dynamic Programming solution I decided to split the problem in two parts, find the shortest path and get the optimal speed. Although the **optimal approach would be a memoizing algorithm**. **I used a recursive tree** to find the best optimal speed for the formula I had to discover.
 
 ## Solution
 ![](https://i.imgur.com/KYMEo37.gif)
